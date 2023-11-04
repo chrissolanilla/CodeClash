@@ -1,3 +1,183 @@
+/* This assumes that your global.css file is already properly imported or included elsewhere */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: 'ITC Galliard STD Ultra';
+    src: url('work.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'ITC Galliard STD Ultra', sans-serif;
+    background-color: rgb(166, 166, 190);
+}
+
+a {
+    color: blue;
+}
+
+a:visited {
+    color: red;
+}
+
+.vs-Mode, .practice, .special-mode, .settings {
+    z-index: 5; 
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Aligns items to the right */
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+.menu-item {
+    margin: 15px; /* Adjust as necessary for spacing */
+    position: relative;
+    width: 50vw; /* Takes up half the viewport width */
+    height: 20vh; /* Adjust the height as necessary */
+    cursor: pointer;
+    display: flex;
+    justify-content: center; /* Centers children horizontally */
+    align-items: center; /* Centers children vertically */
+}
+
+.svg-container {
+    position: relative; /* Change from absolute to relative */
+    width: 40%; /* Adjust based on your design */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1;
+}
+
+.menu-text {
+    position: absolute; /* Ensure text overlays the SVG */
+    width: 100%; /* Full width of the menu-item */
+    height: 100%; /* Full height of the menu-item */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Ensures text is centered if it wraps */
+    transform: translate(-50%, -50%);
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    z-index: 2; /* Ensures the text is above the SVG */
+    font-size: 4vw; /* Adjust size to fill menu-item */
+    white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+/* Corrected the transform stagger for the menu items */
+.menu .menu-item:nth-child(odd) {
+    transform: translateX(0);
+}
+
+.menu .menu-item:nth-child(even) {
+    transform: translateX(0);
+}
+
+/* Text highlighting to black */
+::selection {
+    color: black;
+    background: yellow; /* or any highlight color */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #333;
+    color: yellow;
+}
+
+.navbar .title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.navbar .auth-buttons a {
+    margin-left: 10px;
+    color: yellow;
+    text-decoration: none;
+}
+
+.navbar .auth-buttons a:hover {
+    text-decoration: underline;
+}
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    transform: translateX(-50%) translateY(-50%);
+    background: no-repeat;
+    background-size: cover;
+}
+
+video::-webkit-media-controls-picture-in-picture-button {
+    display: none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+    overflow: hidden;
+    width: calc(100% - 30px);
+}
+
+#background-video {
+    pointer-events: none;
+}
+
+#buttonRed {
+    color: red;
+    background-color: black;
+}
+
+/* Assuming the Tailwind CSS values have been converted into standard CSS */
+.w-1-3 {
+    width: 33.333333%;
+}
+
+.p-4 {
+    padding: 1rem; /* Assuming 1rem = 16px */
+}
+
+.text-xl {
+    font-size: 1.25rem; /* Assuming this is the size you desire for 'xl' */
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.text-lg {
+    font-size: 1.125rem; /* Assuming this is the size you desire for 'lg' */
+}
+
+.font-semibold {
+    font-weight: 600; /* semibold weight */
+}
+
+.h-64 {
+    height: 16rem; /* Assuming 1rem = 16px and .h-64 is 16rem height */
+}
+
+.w-full {
+    width: 100%;
+}
+
+.bg-opacity-50 {
+    background-color: rgba(255, 255, 255, 0.5); /* Assuming a white background. Modify the RGB values accordingly if it's different. */
+}
+
+.blur-md {
+    backdrop-filter: blur(12px); /* Assuming 'md' blur is 12px */
+}

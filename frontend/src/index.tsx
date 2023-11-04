@@ -1,16 +1,22 @@
+// index.tsx
 import m from "mithril";
-import  Login from "./pages/Login";
-
-function App() {
-    return {
-        view: () => (
+import Login from "./pages/Login";
+import { Menu, Nav } from "./components/Menu";
+const App: m.Component = {
+    view: () => [(
+        <>
             <div>
-                <Login/>
-                <h1 class="text-red-500">Hello world</h1>
+              <Nav />
+              <Menu />
+              <Login/>
+                <h1 class="p1">Hello world</h1>
+                <button class="btn btn-primary">Test</button>
+                
+                
             </div>
-        ),
-    };
-}
+        </>
+    )],
+};
 
 m.route(document.body, "/", {
     "/": App

@@ -4,6 +4,7 @@ function Login() {
     return {
         view: () => (
             <>
+                <h1>hello there</h1>
                 <Title/>
             </>
         ),
