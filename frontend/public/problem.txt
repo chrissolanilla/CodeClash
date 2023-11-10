@@ -1,0 +1,6 @@
+You are given an array of size N. The array is not sorted, and each number in the array is unique. You are also given a sum variable in which two numbers in the array can add up to that sum. Write an algorithm where 2 numbers in the array add up to the sum. 
+
+sdf
+dsf
+addadfs
+fadsfasd

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 body {
   background-color: black;
   overflow: hidden;
@@ -297,4 +299,99 @@ body {
 .img{
   max-height: 4em;
   width: auto;
+}
+
+.bg {
+  background-color: yellow;
+}
+
+.codeClashFont {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 0;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Press Start 2P', cursive;
+  transform: perspective(200px) rotateX(10deg);
+  letter-spacing: .1em;
+  user-select: none;
+  text-shadow: 
+    0 -1px 0 #fff, 
+    0 1px 0 #004d40, 
+    0 2px 0 #00483B, 
+    0 3px 0 #004639, 
+    0 4px 0 #004336, 
+    0 5px 0 #004134, 
+    0 6px 0 #003F32, 
+    0 7px 0 #003D30, 
+    0 8px 0 #003A2D, 
+    0 9px 0 #00382B, 
+    0 10px 0 #003528, 
+    0 11px 0 #003225, 
+    0 12px 0 #002F22, 
+    0 13px 0 #002B1E, 
+    0 14px 0 #00281C, 
+    0 15px 0 #001F13, 
+    0 22px 30px rgba(0,0,0, 0.9),
+    0 22px 30px rgba(0, 0, 0, 0.9),
+    0 22px 15px rgba(0, 0, 0, 0.9),
+    0 11px 15px rgba(0, 0, 0, 0.9),
+    0 15px 20px rgba(0, 0, 0, 0.9),
+    0 15px 11px rgba(0, 0, 0, 0.9),
+    0 16px 11px rgba(0, 0, 0, 0.9);
+
+  transition: text-shadow .3s ease .3s, 
+    transform .3s ease .3s,
+    letter-spacing .3s ease .3s;
+  transition: text-shadow .33s ease, 
+  transform .3s ease,
+  letter-spacing .3s ease;
+text-shadow: 0 0 0 #004134,
+  0 1px 0 #00483B,
+  0 2px 0 #003528,
+  0 3px 3px rgba(0, 0, 0, 0.9);
+transform: translate(0px, 15px) 
+  perspective(200px) 
+  rotateX(10deg);
+letter-spacing: .125em;
+}
+
+.problemText {
+  font-family: 'Press Start 2P';
+  
+}
+
+.like-button {
+  fill: #8DA29D;
+  transition: fill 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+/* Add hover effect styles */
+.like-button:hover {
+  fill: #6B7D75; /* Change the fill color when hovered */
+}
+/* Add click effect styles */
+
+.like-button:active {
+  transform: scale(0.95); /* Shrink the button on click */
+}
+.bg-base-200 {
+  background-color: #182024;
+}
+
+.power-up {
+  cursor: pointer;
+  margin: 5px;
+}
+
+.power-up-square {
+  width: 70px; /* Adjust the width to your desired size */
+  height: 70px; /* Adjust the height to your desired size */
+  background-color: #3498db; /* Set the background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff; /* Set the text color */
+  font-size: 14px; /* Adjust the font size */
 }
