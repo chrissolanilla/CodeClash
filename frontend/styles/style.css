@@ -6,7 +6,7 @@
 
 body {
   background-color: black;
-  overflow: hidden;
+  
   /* Hide scrollbars */
 }
 
@@ -428,44 +428,41 @@ letter-spacing: .125em;
   z-index: 1000; /* A high z-index to overlay everything */
 }
 
-/* CSS for modal dialog */
-.modalChris {
-
-  position: absolute;
-  top:50%;
-  left:50%;
-  z-index: 1001; /* A higher z-index to appear on top of overlay */
-}
-
-/* CSS for modal content */
-.modalChris1 {
-  padding: 10px;
-}
-
-/* CSS for modal title */
-.modalChris2 {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-/* CSS for modal close button */
-.modalChris3{
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-/* CSS for modal close button on hover */
-.modalChris3:hover {
-  background-color: #0056b3;
-}
-
-.centerChris {
+.modalContainer {
+  width: 25rem;
+  height:18rem;
   position: absolute;
   left:50%;
-  top:50%;
+  top: 25%;
+  transform: translateX(-50%);
+  background-color: rgba(31, 30, 30, 0.8);
+  text-align: center;
+
+}
+
+.titleTextContainer {
+  margin-bottom: 2rem;
+
+}
+.closeButtonDiv{
+  margin-top: 2em;
+  background-color:gray;
+}
+.closeButtonDiv:hover, .returnButtonDiv:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+.closeButtonDiv:active, .returnButtonDiv:active {
+  background-color: #e5e5e5;
+}
+.returnButtonDiv {
+  color: red;
+  background-color:#2e2020
+}
+
+.checkmark {
+  max-width: 20%;
+  max-height: 20%;
+  margin: auto;
+
 }

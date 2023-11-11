@@ -6,7 +6,7 @@ import Login from "./pages/Front";
 import * as dotenv from 'dotenv';
 import GameLayout from "./pages/GameInstance";
 import 'monaco-editor/min/vs/editor/editor.main.css';
-
+import WinModal from "./components/GameWonModal";
 
 const CLIENT_ID = "Iv1.96555551712a9807";
 
@@ -46,9 +46,20 @@ function GamePage() {
     };
 }
 
+function TestingOutModalLooks() {
+    return {
+        view: () => (
+            <WinModal />
+        )
+    }
+}
+
 m.route.prefix = ""; 
 m.route(document.body, "/", {
     "/": App,
     "/leaderboard": Leaderboard,
     "/gameinstance": GamePage,
+    "/test" : TestingOutModalLooks,
 });
+
+export default App;

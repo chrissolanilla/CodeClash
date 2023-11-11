@@ -13,10 +13,7 @@ function DiffAndRating() {
                 <div class="container mt-3">
                     <h2 class="problemText mb-0 text-orange-100">Difficulty: <p class="text-[#14f754] mb-0"> {difficulty}</p> </h2>
                     
-                    <div class="flex items-center mb-0 p-0">
-                        <LikeButton />
-                        <DislikeButton />
-                    </div>
+                    
                     
                 </div>
                 
@@ -168,7 +165,7 @@ function GameLayout() {
                 {/* Conditionally render the modal */}
                 <div class="centerChris">
                 {isGameWon() ? (
-                    <WinModal closeGameWonModal={closeGameWonModal} />
+                    <WinModal />
                 ) : null}
 
                 </div>
