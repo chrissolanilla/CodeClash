@@ -3,6 +3,7 @@ import stream from "mithril/stream";
 import * as monaco from 'monaco-editor';
 import LikeButton from "../components/Like";
 import DislikeButton from "../components/Dislike";
+import WinModal from "../components/GameWonModal";
 
 function DiffAndRating() {
     let difficulty = 'Easy';
@@ -114,10 +115,24 @@ function PowerUpList() {
     }
 }
 function GameLayout() {
+    
+    let isGameWon = stream(false);
+
+    function openGameWonModal() {
+        isGameWon(true);
+        console.log("clicked")
+    }
+
+    function closeGameWonModal() {
+        isGameWon(false);
+    }
+
+    
     return {
         view: () => (
             //start of html things
             <>
+                
                 <div class="bg-black-100 w-full h-full p-4 flex flex-col items-center justify-center">
                     <div class="grid grid-cols-3 gap-4">
                         {/* Player's Editor */}
@@ -141,14 +156,22 @@ function GameLayout() {
                     </div>
                 </div>
                 <PowerUpList />
-                <div class="card">
+                <div class="flex justify-between" id="play_multi" data-hover="hover" data-hit="hit1">
+                    <div class="mr-5 p-5 bg-gradient-to-br from-gray-800 via-gray-600 to-blue-900 hover:from-blue-900 hover:via-gray-700 hover:to-purple-900 active:from-gray-700 active:via-blue-500 active:to-purple-700">
+                        <img src="/RunCode.svg" /> 
+                    </div>
+                    <div class="ml-5 p-5 bg-gradient-to-br from-green-900 via-green-600 to-green-800 hover:from-green-900 hover:via-green-700 hover:to-green-900 active:from-green-700 active:via-green-500 active:to-green-700">
+                        <img src ='/SubmitCode.svg' onclick={openGameWonModal} />
+                    </div>
                     
-                    <button class="btn btn-primary ">Use your powerups</button>
-                    <h2>or not</h2>
                 </div>
+                {/* Conditionally render the modal */}
+                <div class="centerChris">
+                {isGameWon() ? (
+                    <WinModal closeGameWonModal={closeGameWonModal} />
+                ) : null}
 
-                
-
+                </div>
             </>
             //end of html things
         )

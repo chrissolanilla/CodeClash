@@ -394,4 +394,78 @@ letter-spacing: .125em;
   align-items: center;
   color: #ffffff; /* Set the text color */
   font-size: 14px; /* Adjust the font size */
+  
+}
+
+//tetr.io stuff. 
+.scroller_item.scroller_item_giant > img {
+  height: 6em;
+}
+.scroller_item > img {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  height: 4em;
+  pointer-events: none;
+}
+.scroller_item {
+  font-family: HUN;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* CSS for modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* A high z-index to overlay everything */
+}
+
+/* CSS for modal dialog */
+.modalChris {
+
+  position: absolute;
+  top:50%;
+  left:50%;
+  z-index: 1001; /* A higher z-index to appear on top of overlay */
+}
+
+/* CSS for modal content */
+.modalChris1 {
+  padding: 10px;
+}
+
+/* CSS for modal title */
+.modalChris2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* CSS for modal close button */
+.modalChris3{
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* CSS for modal close button on hover */
+.modalChris3:hover {
+  background-color: #0056b3;
+}
+
+.centerChris {
+  position: absolute;
+  left:50%;
+  top:50%;
 }
